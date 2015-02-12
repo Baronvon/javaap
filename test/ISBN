@@ -1,0 +1,27 @@
+public class ISBN
+{
+  public static boolean isValidISBN(String isbn)
+  {
+    if(isbn.length() == 13)
+    {
+      if(isbn.charAt(0) == '9')
+      {
+        if(isbn.charAt(1) == '7')
+        {
+          if((isbn.charAt(2) == '8') || isbn.charAt(2) == '9')
+          {
+          for(j = 1; j>13; j+2;)
+          {
+            
+            int  = Integer.parseInt(isbn.charAt(j));
+          }
+          }
+        }
+      }
+    }
+    else
+    {
+      return false;
+    }
+  }
+}
