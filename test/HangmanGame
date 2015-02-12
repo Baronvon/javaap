@@ -1,0 +1,179 @@
+import java.io.*; //for file
+02
+import java.util.*; //for scanner
+03
+ 
+04
+public class HangmanGame {
+05
+  public static void main (String[]args)
+06
+    throws FileNotFoundException {
+07
+    Scanner input = new Scanner(new File ("hangman.txt")); //read from file
+08
+    File f = new File("hangman.txt");
+09
+    int index;
+10
+    Random rand = new Random();
+11
+    index = rand.nextInt(10);
+12
+     
+13
+   
+14
+   System.out.println("Let's play hangman!");
+15
+   Scanner console = new Scanner(System.in);
+16
+   System.out.println("Begin guessing letters!");
+17
+   int guess = console.nextInt();
+18
+   String[] words = new String[10];
+19
+    
+20
+ 
+21
+    for(int i = 0; i < words.length; ++i)
+22
+     words[i] = input.nextLine();
+23
+ 
+24
+    if(index == 0) {
+25
+      System.out.println("   |   ");
+26
+      System.out.println("       ");
+27
+      System.out.println("       ");
+28
+      System.out.println("       ");
+29
+      System.out.println("       ");
+30
+      System.out.println("       ");
+31
+      System.out.println("       ");
+32
+    }
+33
+    else if(index >= 0) {
+34
+        System.out.println("   |   ");
+35
+        System.out.println("   O   ");
+36
+        System.out.println("       ");
+37
+        System.out.println("       ");
+38
+        System.out.println("       ");
+39
+        System.out.println("       ");
+40
+        System.out.println("       ");
+41
+    }
+42
+    else if(index >= 1) {
+43
+        System.out.println("   |   ");
+44
+        System.out.println("   O   ");
+45
+        System.out.println("   |   ");
+46
+        System.out.print("         ");
+47
+        System.out.println("       ");
+48
+        System.out.println("       ");
+49
+        System.out.println("       ");
+50
+    }
+51
+    else if(index >= 2) {
+52
+        System.out.println("   |   ");
+53
+        System.out.println("   O   ");
+54
+        System.out.println("   |   ");
+55
+        System.out.print("    //   ");
+56
+        System.out.print("        ");
+57
+        System.out.println("       ");
+58
+        System.out.println("       ");
+59
+    }
+60
+    else if(index >= 3) {
+61
+        System.out.println("   |   ");
+62
+        System.out.println("   O   ");
+63
+        System.out.println("   |   ");
+64
+        System.out.print("     //  ");
+65
+        System.out.print("     \\  ");
+66
+        System.out.println("       ");
+67
+        System.out.println("       ");
+68
+    }
+69
+    else if(index >= 4) {
+70
+        System.out.println("   |   ");
+71
+        System.out.println("   O   ");
+72
+        System.out.println("   |   ");
+73
+        System.out.print("     //  ");
+74
+        System.out.print("     \\  ");
+75
+        System.out.println("   //    ");
+76
+        System.out.println("       ");
+77
+    }
+78
+    else if(index == 5) {
+79
+        System.out.println("   |   ");
+80
+        System.out.println("   O   ");
+81
+        System.out.println("   |   ");
+82
+        System.out.print("     //  ");
+83
+        System.out.print("     \\  ");
+84
+        System.out.println("   //    ");
+85
+        System.out.println("   \\    ");
+86
+    }
+87
+         
+88
+    
+89
+  }
+90
+}[right][/right]
